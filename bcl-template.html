@@ -1110,68 +1110,19 @@
           </div>
         </div>
 
-        <form id="orderForm" onsubmit="processOrder(event)">
-          <div class="form-group">
-            <label>Nama Penuh (Seperti Dalam Kad Pengenalan):</label>
-            <input type="text" id="buyerName" class="form-input" placeholder="cth: Muhammad Danial" required>
-          </div>
+        
+      <!-- BCL EMBED PAYMENT WIDGET -->
+      <div style="background:#ffffff; border-radius:16px; padding:20px; color:#241810; margin:24px 0; min-height:220px; box-shadow:0 10px 30px rgba(0,0,0,0.3);">
+        <div id="bcl-payment-form" data-url="https://zanobyshop.bcl.my/embed/form/kelas-pjj-waffle"></div>
+        <script src="https://bcl.my/js/bc-encrypted-payment-embed.js"></script>
+      </div>
 
-          <div class="form-group">
-            <label>Alamat Emel Sah (Fail Panduan Dihantar Ke Sini):</label>
-            <input type="email" id="buyerEmail" class="form-input" placeholder="cth: danial@gmail.com" required>
-          </div>
+      <div style="display:flex; justify-content:center; gap:20px; font-size:12px; color:var(--text-muted); margin-top:16px;">
+        <span>🔒 256-Bit SSL Enkripsi</span>
+        <span>⚡ Akses Serta-Merta (PDF)</span>
+        <span>📱 Bantuan WhatsApp</span>
+      </div>
 
-          <div class="form-group">
-            <label>Nombor WhatsApp (Untuk Pengesahan Akses):</label>
-            <input type="tel" id="buyerPhone" class="form-input" placeholder="cth: 0134567890" required>
-          </div>
-
-          <!-- INTERACTIVE ORDER BUMP -->
-          <div class="bump-container" onclick="toggleBump()">
-            <div class="bump-top">
-              <input type="checkbox" id="bumpCheck" onclick="event.stopPropagation(); syncPrice();">
-              <div>
-                <div class="bump-title">
-                  ⭐ YA! Tambah Video Masterclass Bancuhan Tepung Waffle (+RM19)
-                </div>
-              </div>
-            </div>
-            <div class="bump-body">
-              <b>Tawaran Khas Jimat 60%:</b> Tonton video demonstrasi praktikal teknik kawalan suhu mesin, adunan tanpa ketulan, dan petua mengelakkan adunan melekat pada teflon secara visual (Durasi 40 minit).
-            </div>
-          </div>
-
-          <!-- Pilihan Bayaran Malaysia -->
-          <div style="margin:20px 0; text-align:left;">
-            <label style="font-size:13px; font-weight:600; color:#E2D9D0; display:block; margin-bottom:8px;">Pilih Kaedah Bayaran:</label>
-
-            <div class="channel-box active" id="fpx-box" onclick="setChannel('fpx-box', 'FPX')">
-              <input type="radio" name="payMethod" value="FPX" checked>
-              <div class="channel-text">
-                <b>Online Banking (FPX)</b>
-                <span>Maybank2u, CIMB Clicks, Bank Islam, RHB, Public Bank, Hong Leong</span>
-              </div>
-            </div>
-
-            <div class="channel-box" id="qr-box" onclick="setChannel('qr-box', 'DuitNow')">
-              <input type="radio" name="payMethod" value="DuitNow">
-              <div class="channel-text">
-                <b>DuitNow QR & e-Wallet</b>
-                <span>Touch 'n Go eWallet, GrabPay, Boost, ShopeePay</span>
-              </div>
-            </div>
-          </div>
-
-          <button type="submit" id="payBtn" class="btn-checkout">
-            Sahkan & Bayar <span id="totalDisplay">RM49.00</span> ➔
-          </button>
-
-          <div style="display:flex; justify-content:center; gap:20px; font-size:12px; color:var(--text-muted); margin-top:16px;">
-            <span>🔒 256-Bit SSL Enkripsi</span>
-            <span>⚡ Akses Serta-Merta</span>
-            <span>📱 Bantuan WhatsApp</span>
-          </div>
-        </form>
       </div>
     </div>
   </section>
